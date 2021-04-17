@@ -10,10 +10,10 @@ class ChatroomPolicy < ApplicationPolicy
   end
 
   def create?
-    if !user.nil?
+    !user.nil?
   end
 
   def destroy?
-    if user == record.user
+    user == record.user
   end
 end

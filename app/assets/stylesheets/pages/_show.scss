@@ -1,0 +1,26 @@
+#room {
+  width: 70%;
+  height: 75vh;
+  margin: 1em auto;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 1em;
+
+  #message-box {
+    padding: 1em;
+    height: 85%;
+    border: 1px solid blue;
+    border-radius: 4px;
+    margin-bottom: 2px;
+
+  }
+
+  #form-box {
+    padding: 1em;
+    height: 15%;
+    border: 1px solid blue;
+    border-radius: 4px;
+    margin-top: 2px;
+  }
+}
+

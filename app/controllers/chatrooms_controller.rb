@@ -1,4 +1,5 @@
 class ChatroomsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
   before_action :find_chatroom, only: [:show, :destroy]
 
   def index

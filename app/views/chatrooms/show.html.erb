@@ -1,15 +1,16 @@
 <div id="room">
   <div id="message-box">
-    <% @chatroom.messages.reverse.each do |message| %>
-      <div class="message-info">
+    <% @chatroom.messages.each do |message| %>
+      <div class="message-info" id="message-<%= message.id %>">
         <p class="nickname"><%= message.user.nickname %></p>
-        <p class="time-o-message">at <%= message.created_at.strftime("%H:%M %A") %></p>
+        <p class="time-o-message"><%= message.created_at.strftime("%H:%M %A") %></p>
       </div>
       <p class="content"><%= message.content %></p>
-
     <% end %>
   </div>
   <div id="form-box">
-<!-- render 'form' -->
+    <% if policy(Message).create? %>
+      <%= render './messages/form' %>
+    <% end %>
   </div>
 </div>

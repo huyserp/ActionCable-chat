@@ -1,5 +1,5 @@
 #room {
-  width: 70%;
+  width: 90%;
   height: 75vh;
   margin: 1em auto;
   border: 1px solid red;
@@ -12,7 +12,30 @@
     border: 1px solid blue;
     border-radius: 4px;
     margin-bottom: 2px;
+    overflow-y: scroll;
 
+    .message-info {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin-bottom: 0;
+
+      .nickname {
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      .time-o-message {
+        margin-bottom: 0;
+        margin-left: 2em;
+        font-weight: lighter;
+        font-size: .7em;
+        opacity: .7;
+      }
+    }
+    .content {
+
+    }
   }
 
   #form-box {

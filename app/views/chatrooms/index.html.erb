@@ -1,12 +1,14 @@
 <h1>Choose a topic!</h1>
 <% @chatrooms.each do |room| %>
-  <%= link_to chatroom_path(room) do %>
-    <div class="room-details">
-      <h3><%= room.topic %></h3>
-      <div>
-        <p>created by: <%= room.user.nickname %></p>
-        <p><%= room.messages.map { |message| message.user }.uniq.count %> participants</p>
+  <% if policy(Chatroom).show? %>
+    <%= link_to chatroom_path(room) do %>
+      <div class="room-details">
+        <h3><%= room.topic %></h3>
+        <div>
+          <p>created by: <%= room.user.nickname %></p>
+          <p><%= room.messages.map { |message| message.user }.uniq.count %> participants</p>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 <% end %>

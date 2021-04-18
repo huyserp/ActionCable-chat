@@ -1,6 +1,6 @@
 class ChatroomsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
-  before_action :find_chatroom, only: [:show, :destroy]
+  before_action :find_chatroom, only: :show
 
   def index
     @chatrooms = policy_scope(Chatroom).order(created_at: :desc)
@@ -19,10 +19,6 @@ class ChatroomsController < ApplicationController
     else
       render :index
     end
-  end
-
-  def destroy
-    authorize @chatroom
   end
 
   private

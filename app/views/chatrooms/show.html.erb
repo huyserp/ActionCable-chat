@@ -1,11 +1,7 @@
 <div id="room">
-  <div id="message-box">
+  <div id="message-box" data-chatroom-id="<%= @chatroom.id %>">
     <% @chatroom.messages.each do |message| %>
-      <div class="message-info" id="message-<%= message.id %>">
-        <p class="nickname"><%= message.user.nickname %></p>
-        <p class="time-o-message"><%= message.created_at.strftime("%H:%M %A") %></p>
-      </div>
-      <p class="content"><%= message.content %></p>
+      <%= render './messages/message', message: message %>
     <% end %>
   </div>
   <div id="form-box">

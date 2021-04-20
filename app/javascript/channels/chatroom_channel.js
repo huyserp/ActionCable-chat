@@ -7,21 +7,13 @@ const initChatroomCable = () => {
 
     consumer.subscriptions.create({ channel: "ChatroomChannel", id: id }, {
       received(data) {
-        console.log(data);
-        // Called when there's incoming data on the websocket for this channel
+        console.log(data); // Called when there's incoming data on the websocket for this channel
+        messagesContainer.insertAdjacentHTML('beforeend', data);
       }
     });
   }
 }
 
-  connected() {
-    // Called when the subscription is ready for use on the server
-  },
-
-  disconnected() {
-    // Called when the subscription has been terminated by the server
-  },
-
-  export { initChatroomCable };
+export { initChatroomCable };
 
 

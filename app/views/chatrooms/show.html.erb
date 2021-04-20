@@ -1,7 +1,7 @@
 <div id="room">
   <div id="message-box" data-chatroom-id="<%= @chatroom.id %>">
     <% @chatroom.messages.each do |message| %>
-      <%= render './messages/message' %>
+      <%= render './messages/message', message: message %>
     <% end %>
   </div>
   <div id="form-box">

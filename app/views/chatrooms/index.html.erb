@@ -1,7 +1,7 @@
 <h1>Choose a topic!</h1>
 <% @chatrooms.each do |room| %>
   <% if policy(Chatroom).show? %>
-    <%= link_to chatroom_path(room) do %>
+    <%= link_to chatroom_path(room, anchor: "message-#{room.messages.last.id}") do %>
       <div class="room-details">
         <h3><%= room.topic %></h3>
         <div>

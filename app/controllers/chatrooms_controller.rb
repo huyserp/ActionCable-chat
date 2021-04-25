@@ -4,18 +4,21 @@ class ChatroomsController < ApplicationController
 
   def index
     @chatrooms = policy_scope(Chatroom).order(created_at: :desc)
+    @new_chatroom = Chatroom.new
   end
 
   def show
+    @new_chatroom = Chatroom.new
     authorize @chatroom
     @message = Message.new
   end
 
   def create
-    @chatroom = Chatroom.new(chatroom_params)
-    @chatroom.user = current_user
-    if @chatroom.save
-      redirect_to chatroom_path(@chatroom)
+    @new_chatroom = Chatroom.new(chatroom_params)
+    authorize @new_chatroom
+    @new_chatroom.user = current_user
+    if @new_chatroom.save
+      redirect_to chatrooms_path
     else
       render :index
     end

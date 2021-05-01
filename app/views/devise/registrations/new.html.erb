@@ -9,6 +9,15 @@
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
     <%= f.input :nickname, required: true %>
+    <%= f.collection_radio_buttons :color,
+      [['54478C'], ['2C699A'], ['048BA8'],
+       ['0DB39E'], ['16DB93'], ['83E377'],
+       ['B9E769'], ['EFEA5A'], ['F1C453'], ['F29E4C']],
+       :first,
+       :last do |b| %>
+      <%= b.radio_button + b.label {''} %>
+    <% end %>
+
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -24,3 +33,8 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
+<!-- [['54478C', 'Dark Slate Blue'], ['2C699A', 'Sapphire Blue'], ['048BA8', 'Blue Munsell'],
+       ['0DB39E', 'Keppel'], ['16DB93', 'Medium Aquamarine'], ['83E377', 'Light Green'],
+       ['B9E769', 'Inchworm'], ['EFEA5A', 'Corn'], ['F1C453', 'Maize Crayola'], ['F29E4C', 'Sandy Brown']], -->

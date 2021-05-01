@@ -1,7 +1,9 @@
 <div class="message-box">
-  <div class="message-info" id="message-<%= message.id %>">
-    <p class="nickname"><%= message.user.nickname %></p>
-    <p class="time-o-message"><%= message.created_at.strftime("%H:%M %A, %B %d") %></p>
+  <div class="message">
+    <div class="message-info" id="message-<%= message.id %>">
+      <p class="nickname"><%= message.user.nickname %></p>
+      <p class="time-o-message"><%= message.created_at.strftime("%H:%M %A, %B %d") %></p>
+    </div>
+    <p class="content"><%= message.content %></p>
   </div>
-  <p class="content"><%= message.content %></p>
 </div>

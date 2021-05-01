@@ -33,17 +33,28 @@
         opacity: .7;
       }
     }
-    .content {
-
-    }
   }
 
   #form-box {
-    padding: 1em;
+    // padding: 1em;
     height: 15%;
     border: 1px solid blue;
     border-radius: 4px;
-    margin-top: 2px;
+    margin-top: 8px;
+    position: relative;
+    input {
+      position: absolute;
+      font-size: 1.5em;
+      margin: 0 1em;
+      top: 25%;
+      background-color: transparent;
+      border: none;
+      &:focus {
+        background-color: none;
+        box-shadow: none;
+        border: none;
+      }
+    }
   }
 }
 

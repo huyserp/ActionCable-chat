@@ -1,0 +1,24 @@
+// form {
+//   .flex {
+//     display: flex;
+//     justify-content: space-evenly;
+//     label {
+//       display: inline-block;
+//       height: 1em;
+//     }
+//   }
+// }
+.form-inputs {
+  .radio-flex {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  label.btn {
+    display: inline-block;
+    height: 2em;
+    width: 3em;
+    &:focus {
+      outline: 2px solid red;
+    }
+  }
+}

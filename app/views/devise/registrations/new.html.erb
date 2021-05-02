@@ -9,6 +9,20 @@
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
     <%= f.input :nickname, required: true %>
+
+    <label for="">Color Theme</label>
+    <div class="radio-flex">
+      <%= f.collection_radio_buttons :color,
+        [['54478C'], ['2C699A'], ['048BA8'], ['0DB39E'], ['16DB93'],
+         ['83E377'], ['B9E769'], ['EFEA5A'], ['F1C453'], ['F29E4C']],
+         :first,
+         :last do |b| %>
+          <%= b.label(class: 'btn', tabindex: '0', for: b.text, style: "background-color: ##{b.text};") do %>
+            <%= b.radio_button(id: b.object, style: 'display: none;') %>
+          <% end %>
+      <% end %>
+    </div>
+
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),

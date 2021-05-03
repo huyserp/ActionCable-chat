@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: flex-end;
-  background: white;
+  background: black;
+  #navbarSupportedContent > ul > li > a, #navbarDropdown {
+    color: #46BDDF;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

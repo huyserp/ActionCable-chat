@@ -1,6 +1,6 @@
 <div class="message-box">
-  <div class="bubble" style="background-color: #<%= message.user.color %>;">
-    <div class="message" id="message-<%= message.id %>">
+  <div class="bubble" style="border: 3px solid #<%= message.user.color %>; background-color: #<%= message.user.color %>78;">
+    <div class="message" id="message-<%= message.id %>" style="color: #<%= message.user.color %>">
       <div class="message-info">
         <p class="nickname"><%= message.user.nickname %></p>
         <p class="time-o-message"><%= message.created_at.strftime("%H:%M %A, %B %d") %></p>

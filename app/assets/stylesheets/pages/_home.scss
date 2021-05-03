@@ -1,16 +1,18 @@
 // Specific CSS for your home-page
 h1 {
-  width: 300px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
+  color: #46BDDF;
+  border-bottom: 1px solid #E5C453;
 }
 
 .room-details {
   width: 60%;
   margin: 1em auto;
   padding: 8px;
-  border: 1px solid red;
-  border-radius: 4px;
+  border-left: 3px solid #E5C453;
+  color: #52D273;
   &:hover {
     transform: scale(1.05);
     transition: all 200ms ease-in;

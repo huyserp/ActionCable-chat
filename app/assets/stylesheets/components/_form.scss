@@ -8,21 +8,66 @@
 //     }
 //   }
 // }
+
+h2, {
+  color: #52D273;
+  text-align: center;
+}
+
+div.form-actions > input {
+   color: #52D273;
+   padding: 4px;
+   border: 2px solid #52D273;
+   border-radius: 2px;
+   &:hover {
+    border: 2px solid black;
+   }
+}
+
+div.devise-links > a {
+  color: #52D273;
+
+  &:hover {
+    color: black;
+  }
+}
+
 #message_content{
   color: white
 }
 
 .form-inputs {
+  input {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #000;
+    color: white;
+    &:focus, &:active {
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      border-bottom: 1px solid #000;
+      color: white;
+    }
+  }
+
   .radio-flex {
     display: flex;
     justify-content: space-evenly;
-  }
-  label.btn {
+
+  .btn {
     display: inline-block;
     height: 2em;
     width: 3em;
     &:focus {
       outline: 2px solid red;
     }
+  }
+  }
+  label {
+    font-size: 1.5em;
+    color: #6C757D;
+
   }
 }

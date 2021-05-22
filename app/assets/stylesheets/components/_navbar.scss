@@ -13,3 +13,29 @@
 .nav-item {
   margin: 0 .5em;
 }
+
+.dropdown-menu {
+  background-color: #46BDDF;
+  border: 5px solid #484848;
+  .dropdown-item {
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+#chatroom_topic {
+  width: 200px;
+  background-color: #484848;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #6C757D;
+
+  &:focus {
+    color: white;
+  }
+}
+
+
+

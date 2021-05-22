@@ -1,3 +1,3 @@
-<%= simple_form_for @new_chatroom, remote: true do |f| %>
-  <%= f.input :topic, label: false, placeholder: "New topic!", class: "new-topic" %>
+<%= simple_form_for @new_chatroom, class: "new-topic", remote: true do |f| %>
+  <%= f.input :topic, label: false, placeholder: "What to talk about..." %>
 <% end %>

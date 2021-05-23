@@ -56,18 +56,26 @@ div.devise-links > a {
     display: flex;
     justify-content: space-evenly;
 
-  .btn {
-    display: inline-block;
-    height: 2em;
-    width: 3em;
-    &:focus {
+    .btn {
+      display: inline-block;
+      height: 2em;
+      width: 3em;
+      // &:focus {
+      //   outline: 2px solid red;
+      // }
+    }
+    input[type='radio']:checked + label {
       outline: 2px solid red;
     }
   }
-  }
+
   label {
     font-size: 1.5em;
     color: #6C757D;
 
   }
+}
+
+.red-select {
+  outline: 2px solid red;
 }

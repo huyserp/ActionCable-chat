@@ -17,7 +17,7 @@
          :last,
          :first do |b| %>
           <%= b.radio_button(id: b.object, style: 'display: none;') %>
-          <%= b.label(class: 'btn', tabindex: '0', for: b.text, style: "background-color: ##{b.text};") %>
+          <%= b.label(class: 'btn', for: b.text, style: "background-color: ##{b.text}; content: '';") %>
       <% end %>
     </div>
 

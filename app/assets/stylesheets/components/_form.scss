@@ -74,6 +74,16 @@ div.devise-links > a {
   }
 }
 
-.red-select {
-  outline: 2px solid red;
+@media screen and (max-width: 400px) {
+  .form-inputs {
+    .radio-flex {
+      input[type='radio'] + label {
+        height: 32px;
+        width: 32px;
+      }
+    }
+    label {
+      font-size: 1.3em;
+    }
+  }
 }

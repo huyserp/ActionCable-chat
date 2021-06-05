@@ -35,3 +35,15 @@ a {
     color: black;
   }
 }
+
+@media screen and (max-width: 400px) {
+  h3 {
+    font-size: 1.2em;
+  }
+  .room-details {
+    width: 100%;
+    div > p {
+      font-size: .7em;
+    }
+  }
+}

@@ -18,7 +18,6 @@ require("channels")
 import 'bootstrap';
 
 import { initChatroomCable } from '../channels/chatroom_channel';
-import { highlightLabel } from '../components/init_radio_value';
 
 document.addEventListener('turbolinks:load', () => {
   initChatroomCable();

@@ -11,18 +11,19 @@
     <% end %>
 
     <%= f.input :nickname, required: false, hint: "make it snazzy!" %>
+    <%= f.input :photo, as: :file %>
 
     <label for="">Color Theme</label>
     <div class="radio-flex">
       <%= f.collection_radio_buttons :color,
-        [['0DB39E'], ['16DB93'], ['83E377'], ['B9E769'], ['EFEA5A'], ['F1C453'], ['F29E4C']],
-         :first,
-         :last do |b| %>
-          <%= b.label(class: 'btn', tabindex: '0', for: b.text, style: "background-color: ##{b.text};") do %>
-            <%= b.radio_button(id: b.object, style: 'display: none;') %>
-          <% end %>
+        [['0DB39E'], ['16DB93'],  ['83E377'], ['B9E769'], ['EFEA5A'], ['F1C453'], ['F29E4C']],
+         :last,
+         :first do |b| %>
+          <%= b.radio_button(id: b.object, style: 'display: none;') %>
+          <%= b.label(class: 'btn', for: b.text, style: "background-color: ##{b.text}; content: '';") %>
       <% end %>
     </div>
+
 
     <%= f.input :password,
                 hint: "leave it blank if you don't want to change it",

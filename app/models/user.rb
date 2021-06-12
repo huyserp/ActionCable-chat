@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :chatrooms
   has_many :messages
+  has_one_attached :photo
 
   COLORS = ['0DB39E', '16DB93', '83E377', 'B9E769', 'EFEA5A', 'F1C453', 'F29E4C']
 

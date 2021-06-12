@@ -27,6 +27,9 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 
+# For image upload management
+gem 'cloudinary', '~> 1.16.0'
+
 # for Authentication
 gem 'devise'
 
